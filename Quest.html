@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Questionnaire</title>
+        <script src="lib/jquery-3.6.0.js"></script>
+     <link rel="stylesheet" href="Quest.css">
+</head>
+  <body>
+      <div class="whole">
+        <h1>Questionnaire Analysis Made Simple</h1>
+        <div class="row">
+          <div class="col">
+            <div class="sn">
+              <p></p>
+            </div>
+            <div class="items">
+              <p class="item">SA</p>
+            </div>
+            <div class="nums">
+              <p class="num" id="num">0</p>
+            </div>
+            <div class="btns">
+              <button class="add" id="add">ADD </button>
+              <button class="add" id="remove">REMOVE</button>
+            </div>
+          </div>
+          <div class="col">
+            <div class="sn">
+              <p></p>
+            </div>
+            <div class="items">
+              <p class="item">A</p>
+            </div>
+            <div class="nums">
+              <p class="num" id="numa">0</p>
+            </div>
+            <div class="btns">
+              <button class="add" id="adda">ADD</button>
+              <button class="add" id="removea">REMOVE</button>
+            </div>
+          </div>
+          <div class="col">
+            <div class="sn">
+              <p></p>
+            </div>
+            <div class="items">
+              <p class="item">SD</p>
+            </div>
+            <div class="nums">
+              <p class="num" id="numsd">0</p>
+            </div>
+            <div class="btns">
+              <button class="add" id="addsd">ADD</button>
+              <button class="add" id="removesd">REMOVE</button>
+            </div>
+          </div>
+          <div class="col">
+            <div class="sn">
+              <p></p>
+            </div>
+            <div class="items">
+              <p class="item">D</p>
+            </div>
+            <div class="nums">
+              <p class="num" id="numd">0</p>
+            </div>
+            <div class="btns">
+              <button class="add" id="addd">ADD</button>
+              <button class="add" id="removed">REMOVE</button>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <div class="sn">
+              <p></p>
+            </div>
+            <div class="items">
+              <p class="item">SA</p>
+            </div>
+            <div class="nums">
+              <p class="num" id="num1">0</p>
+            </div>
+            <div class="btns">
+              <button class="add" id="add1">ADD</button>
+              <button class="add" id="remove1">REMOVE</button>
+            </div>
+          </div>
+          <div class="col">
+            <div class="sn">
+              <p></p>
+            </div>
+            <div class="items">
+              <p class="item">A</p>
+            </div>
+            <div class="nums">
+              <p class="num" id="numa1">0</p>
+            </div>
+            <div class="btns">
+              <button class="add" id="adda1">ADD</button>
+              <button class="add" id="removea1">REMOVE</button>
+            </div>
+          </div>
+          <div class="col">
+            <div class="sn">
+              <p></p>
+            </div>
+            <div class="items">
+              <p class="item">SD</p>
+            </div>
+            <div class="nums">
+              <p class="num" id="numsd1">0</p>
+            </div>
+            <div class="btns">
+              <button class="add" id="addsd1">ADD</button>
+              <button class="add" id="removesd1">REMOVE</button>
+            </div>
+          </div>
+          <div class="col">
+            <div class="sn">
+              <p></p>
+            </div>
+            <div class="items">
+              <p class="item">D</p>
+            </div>
+            <div class="nums">
+              <p class="num" id="numd1">0</p>
+            </div>
+            <div class="btns">
+              <button class="add" id="addd1">ADD</button>
+              <button class="add" id="removed1">REMOVE</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="total">
+        <p class="tote" id="tote">0</p>
+      </div>
+      <script>
+        var btng = document.querySelector(".add")
+        var tote = document.getElementById("tote")
+        var addbtn = document.getElementById("add")
+        var rembtn = document.getElementById("remove")
+        var numsa = document.getElementById("num")
+        var add1 =0
+
+        var addbtna = document.getElementById("adda")
+        var rembtna = document.getElementById("removea")
+        var numa = document.getElementById("numa")
+        var add2 = 0
+
+        var addbtnsd = document.getElementById("addsd")
+        var rembtnsd = document.getElementById("removesd")
+        var numsd = document.getElementById("numsd")
+        var add3 = 0
+
+        var addbtnd = document.getElementById("addd")
+        var rembtnd = document.getElementById("removed")
+        var numd = document.getElementById("numd")
+        var add4 = 0
+
+
+        var total = add1 + add2 + add3 + add4
+
+        add.addEventListener("click", function(){
+          tote.textContent = total
+        })
+
+        tote = total
+      addbtn.addEventListener("click", function(){
+        add1++
+        numsa.textContent = add1
+      })
+      rembtn.addEventListener("click", function(){
+        add1--
+        numsa.textContent = add1
+      })
+
+
+
+        addbtna.addEventListener("click", function(){
+        add2++
+        numa.textContent = add2
+      })
+      rembtna.addEventListener("click", function(){
+        add2--
+        numa.textContent = add2
+      })
+
+
+      addbtnsd.addEventListener("click", function(){
+        add3++
+        numsd.textContent = add3
+      })
+      rembtnsd.addEventListener("click", function(){
+        add3--
+        numsd.textContent = add3
+      })
+
+
+      addbtnd.addEventListener("click", function(){
+        add4++
+        numd.textContent = add4
+      })
+      rembtnd.addEventListener("click", function(){
+        add4--
+        numd.textContent = add4
+      })
+      </script>
+      <script>
+        var btng1 = document.querySelector(".add1")
+        var tote = document.getElementById("tote")
+        var addbtn1 = document.getElementById("add1")
+        var rembtn1 = document.getElementById("remove1")
+        var numsa1 = document.getElementById("num1")
+        var add11 =0
+
+        var addbtna1 = document.getElementById("adda1")
+        var rembtna1 = document.getElementById("removea1")
+        var numa1 = document.getElementById("numa1")
+        var add21 = 0
+
+        var addbtnsd1 = document.getElementById("addsd1")
+        var rembtnsd1 = document.getElementById("removesd1")
+        var numsd1 = document.getElementById("numsd1")
+        var add31 = 0
+
+        var addbtnd1 = document.getElementById("addd1")
+        var rembtnd1 = document.getElementById("removed1")
+        var numd1 = document.getElementById("numd1")
+        var add41 = 0
+
+      addbtn1.addEventListener("click", function(){
+        add11>=0
+        add11++
+        numsa1.textContent = add11
+      })
+      rembtn1.addEventListener("click", function(){
+        add11--
+        numsa1.textContent = add11
+      })
+
+
+
+        addbtna1.addEventListener("click", function(){
+        add21++
+        numa1.textContent = add21
+      })
+      rembtna1.addEventListener("click", function(){
+        add21--
+        numa1.textContent = add21
+      })
+
+
+      addbtnsd1.addEventListener("click", function(){
+        add31++
+        numsd1.textContent = add31
+      })
+      rembtnsd1.addEventListener("click", function(){
+        add31--
+        numsd1.textContent = add31
+      })
+
+
+      addbtnd1.addEventListener("click", function(){
+        add41++
+        numd1.textContent = add41
+      })
+      rembtnd1.addEventListener("click", function(){
+        add41--
+        numd1.textContent = add41
+      })
+      </script>
+  </body>
+</html>
+    <!-- // var num1=document.getElementById("san")
+    // var num2=document.getElementById("an")
+    // var num3=document.getElementById("sdn")
+    // var num4=document.getElementById("dn")
+    // var add1=document.getElementById("sab")
+    // var add2=document.getElementById("ab")
+    // var add13=document.getElementById("sdb")
+    // var add4=document.getElementById("db")
+    // var remove1=document.getElementById("sarb")
+    // var remove2=document.getElementById("arb")
+    // var remove3=document.getElementById("sdrb")
+    // var remove4=document.getElementById("drb")
+    // var num1=0
+    // var num2=0
+    // var num3=0
+    // var num4=0 -->
